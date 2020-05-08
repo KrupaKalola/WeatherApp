@@ -38,13 +38,13 @@ function Autocomplete(props) {
                     }} />
                     <FontAwesomeIcon className='search' icon={faSearch} onClick={handleSearch}></FontAwesomeIcon>
 
-                    <div style={{ position: 'absolute', top: 75, left: 230 }}>
+                    <div style={{ display: 'flex', alignItems: 'center', flexDirection: 'column' }}>
                         {suggestions.map((suggestion) => {
                             const style = {
-                                backgroundColor: suggestion.active ? "#f12345" : "#fff",
+                                backgroundColor: suggestion.active ? "#bbded6" : "#fff",
                                 width: '290px',
                                 padding: '5px',
-                                borderBottom: '1px solid #f12345'
+                                borderBottom: '1px solid #bbded6'
                             }
                             return <div {...getSuggestionItemProps(suggestion, { style })} >
                             {suggestion.description}</div>

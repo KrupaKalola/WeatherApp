@@ -1,42 +1,47 @@
+.mainContent>img{
+    min-height: 100%;
+  min-width: 1024px;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size:cover ;
+}
 .search-input{
     border-radius: 10px;
-    border: 1px solid #fff;
-    padding:5px;
+    background-color: transparent;
+    border : 2px solid #05445c;
+    padding:2px;
     width:300px
 }
 input:focus{
     outline: none;
-    border : 1px solid red;
+    border : 2px solid #05445c;
     border-radius: 10px;
 }
 .search{
-    position: absolute;
-    top: 53px;
-    right:230px;
+    position: relative;
+    top: 1px;
+    right:25px;
+    color: #05445c;
 }
 .weather-wrapper{   
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%,-10%);
-    width: 760px;
     text-align: center;
     margin: 0 auto;
-    color: #000;
+    color: #4E0E2E;
 }
-.d-flex{
-    display: flex;
-    justify-content: flex-start;
-    margin-top: 30px;
-}
+/* 
 .d-flex div{
     margin-right: 160px;
 }
 .d-flex div:last-child{
     margin-right: 0;
-}
+} */
 .weather-search{
     position: relative;
+    top: 30px;
 }
 .weatherContent{
     margin-top: 60px;
@@ -61,12 +66,18 @@ input:focus{
     margin-right: auto;
     justify-content: center;
 }
-.forecast7 div{
+.forecast7 {
     margin-right: 15px;
     padding-right: 15px;
-    border-right: 1px solid #000;
 }
 .forecast7 div:last-child{
     margin-right: 0;
-    border-right: none;
+    border-right: none !important;
+}
+
+@media screen and (max-width: 992px){
+    .forecast7>div{
+        border-right: none;
+        border: 1px solid #fff;
+    }
 }

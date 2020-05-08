@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import { Container, Row, Col } from 'reactstrap';
 import cloud from '../images/cloud.jpeg'
 import snow from '../images/snow.jpeg'
 import drizzle from '../images/drizzle.jpg'
@@ -110,9 +110,9 @@ function WeatherComponent() {
     }
     var moment = require('moment');
     return (
-        <div>
-            <img src={bg} width='100%' height="666px" style={{ opacity: 0.5 }}></img>
-            <div className='weather-wrapper'>
+        <div className="mainContent">
+            <img src={bg}></img>
+            <Container className='weather-wrapper'>
                 <div className='weather-search'>
                     <h2>Weather App</h2>
                     {/* <input type='text' name='city' id="autocomplete"
@@ -142,7 +142,7 @@ function WeatherComponent() {
                 ></WeatherDetail>
 
                 <Forecast7 displayData={display} forecastWrapper={forecastWrapper} />
-            </div>
+            </Container>
         </div>
     );
 }
